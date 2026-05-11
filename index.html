@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherNow</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>WeatherNow</h1>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Enter city name">
+      <button id="search-btn">Search</button>
+    </div>
+
+    <p id="validation-msg" class="validation-msg"></p>
+
+    <div id="error-banner" class="error-banner hidden">
+      <span id="error-msg">Something went wrong.</span>
+      <button id="retry-btn">Retry</button>
+    </div>
+
+    <div class="current-card" id="current-card">
+      <h2 id="city-name" class="skeleton">Loading...</h2>
+      <p id="weather-desc" class="skeleton">Loading...</p>
+      <p id="local-time"></p>
+
+      <div class="weather-main">
+        <div id="weather-icon" class="weather-icon skeleton">⛅</div>
+        <div id="temp-big" class="temp-big skeleton">--°C</div>
+      </div>
+
+      <div class="weather-meta">
+        <div class="meta-box">
+          <span>Humidity</span>
+          <strong id="humidity" class="skeleton">--</strong>
+        </div>
+        <div class="meta-box">
+          <span>Wind Speed</span>
+          <strong id="wind" class="skeleton">--</strong>
+        </div>
+        <div class="meta-box">
+          <span>Feels Like</span>
+          <strong id="feels-like" class="skeleton">--</strong>
+        </div>
+        <div class="meta-box">
+          <span>Wind Dir.</span>
+          <strong id="wind-dir" class="skeleton">--</strong>
+        </div>
+      </div>
+    </div>
+
+    <h3>7-Day Forecast</h3>
+    <div class="forecast-row" id="forecast-row"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
